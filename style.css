@@ -1,0 +1,244 @@
+:root{
+
+    --bg-color:black;
+}
+
+
+*{
+
+    transition: 1s;
+    text-decoration: none;
+    font-size: 15pt;
+    padding: 0;
+    margin: 0;
+    color: rgb(55, 50, 0);
+}
+
+body{
+    background-color: white;
+    display: flex;
+    flex-direction:row;
+    height: 100vh;
+    overflow: hidden;
+    flex-wrap: wrap;
+
+}
+
+section{
+    flex-basis: 500px;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    flex-grow: 1;
+}
+
+section:nth-child(2){
+    background:linear-gradient(rgb(0, 37, 0), rgb(89, 105, 0), rgb(0, 0, 0));
+}
+
+.popup{
+    position:fixed;
+    width: 50vw;
+    height: 60vh;
+
+    z-index: -10;
+    opacity: 0;
+
+    background:linear-gradient( rgb(255, 255, 0), rgba(255, 115, 0, 0.984), rgb(128, 2, 0));
+    border-radius: 1rem;
+    left:23vw;
+    top: 23vh;
+    display:flex;
+    flex-direction: column;
+    --color:rgb(255, 255, 255);
+    
+    padding-left: 1rem;
+    padding-top: 0rem;
+    gap: .5rem;
+    border:2px solid rgb(93, 6, 0);
+}
+.exitpop{
+    display: grid;
+    place-items: center;
+    font-size: 10pt;
+    margin-left:calc(51vw - 2rem);
+    margin-top: .5rem;
+    border-radius: .2rem;
+    background-color: rgba(126, 0, 0, 0.462);
+    width: fit-content;
+    padding: .3rem;
+}
+.popup h1{
+    text-shadow: 2px 2px 5px black;
+    color:var(--color);
+}
+.popup p{
+    text-shadow: 2px 2px 5px black;
+    font-size: 10pt;
+    text-align: justify;
+    color:var(--color);
+    padding-right: 1rem;
+
+}
+section img{
+
+    max-height: 40rem;
+    max-width: 20rem;
+    filter: drop-shadow(25px 35px 20px black);
+    transition: 1s;
+    z-index: 2;
+    position: absolute;
+}
+section img:hover{
+    filter: drop-shadow(5px 5px 0px rgb(40, 0, 0));
+}
+.circles{
+    position: absolute;
+    background-color: gold;
+    border-radius: 100%;
+}
+.one{
+    z-index: -10;
+    width: 400px;
+    height: 400px;
+    margin-right: 40vw;
+    margin-bottom: 40vw;
+}
+
+.two{
+    z-index: -9;
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    margin-right: -20vw;
+    margin-bottom: 20vw;
+}
+.three{
+    z-index: -8;
+    width: 350px;
+    height: 350px;
+    background-color: greenyellow;
+    margin-right: -20vw;
+    margin-bottom: -40vw;
+}
+.four{
+    z-index: -7;
+    width: 250px;
+    height: 250px;
+    background-color: green;
+    margin-right: 50vw;
+    margin-bottom: -40vw;
+}
+.five{
+    z-index: -6;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255, 157, 0);
+    margin-right: 20vw;
+    margin-bottom: -10vw;
+}
+.sec2{
+    height: 110vh;
+    z-index:2;
+}
+.outer{
+    background-color:white;
+    border-radius: 1rem;
+    width: calc(15rem + 16vw );
+    height: 20rem;
+    overflow: hidden;
+    --pad:15rem;
+    --trans:rotate(0deg);
+    --bg-in:rgba(255, 217, 0, 0.504);
+    box-shadow: 5px 5px 10px black;
+    
+}
+.outer:hover{
+    --pad:0rem;
+    --trans:rotate(90deg);
+    --bg-in:rgba(152, 251, 152, 0.333);
+
+}
+.inner{
+    width: 100%;
+    height: inherit;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(lightgreen,rgb(255, 232, 105),rgb(255, 149, 100), lightcoral,rgb(234, 64, 64),  red);
+}
+.form{
+    margin-top: var(--pad);
+    height: 100%;
+    background-color:var(--bg-in);
+    display: flex;
+    flex-direction: column;
+}
+.form h1{
+    font-size: calc(25pt - .3em);
+    margin:1rem 0rem 0rem 1rem;
+    width: fit-content;
+    margin-bottom: 2rem;
+    font-family: sans-serif;
+    
+}
+
+.in{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.in input{
+    width: calc(15rem - 20vw);
+    flex-grow: 1;
+    outline-color: transparent;
+    padding: .4rem;
+    border: none;
+    border-radius: .2rem;
+    background-color:lightgoldenrodyellow;
+    transition: .5s;
+}
+
+.in a{
+    background-color: aliceblue;
+    padding: .5rem;
+    border-radius: 1rem;
+    flex-grow: 1;
+    flex-basis: 10vw;
+    text-align: center;
+}
+.in input:hover, .in button:hover{
+    transform: scale(105%);
+    background-color: rgb(255, 234, 113);
+    outline-color: rgb(255, 234, 113);
+
+}
+
+.in button:active{
+    background-color: lightcoral;
+}
+.in button{
+    padding: .5rem 1.5rem .5rem 1.5rem;
+    width: 95%;
+    background-color:lightgoldenrodyellow;
+    border-radius: .5rem;
+    border: none;
+    transition: .4s;
+}
+
+@media (max-width:1000px){
+    body{
+        overflow-y: visible;
+    }
+}
+::-webkit-scrollbar{
+    background-color: palegreen;
+}
+::-webkit-scrollbar-thumb{
+    background-color: darkgoldenrod;
+    border-radius: 1rem;
+}
